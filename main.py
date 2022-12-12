@@ -3,9 +3,6 @@ import numpy as np
 
 def MAIN_FUNCTION(puzzle):
     """INPUT"""
-    # puzzle = np.array([[int(input()) for _ in range(4)], [int(input()) for _ in range(4)], [int(input()) for _ in range(4)], [int(input()) for _ in range(4)]])
-    # print("INPUT")
-    # print(puzzle)
     """POSITION"""
     for x in range(0, 4):
         for y in range(0, 4):
@@ -54,10 +51,6 @@ def MAIN_FUNCTION(puzzle):
             elif puzzle[x][y] == 15:
                 posi_15_row = x
                 posi_15_colum = y
-            # else:
-            #     posi_0_row = x
-            #     posi_0_colum = y
-
     """MANHATTAN"""
     man_1 = abs(posi_1_row-0)+abs(posi_1_colum-0)
     man_2 = abs(posi_2_row-0)+abs(posi_2_colum-1)
@@ -74,7 +67,6 @@ def MAIN_FUNCTION(puzzle):
     man_13 = abs(posi_13_row-3)+abs(posi_13_colum-0)
     man_14 = abs(posi_14_row-3)+abs(posi_14_colum-1)
     man_15 = abs(posi_15_row-3)+abs(posi_15_colum-2)
-    # man_0 = abs(posi_0_row-3)+abs(posi_0_colum-3)
     total_man = man_1+man_2+man_3+man_4+man_5+man_6+man_7+man_8+man_9+man_10+man_11+man_12+man_13+man_14+man_15
     return total_man
 MAIN_FUNCTION(np.array([[int(input()) for _ in range(4)], [int(input()) for _ in range(4)], \
@@ -90,18 +82,6 @@ def Pararell12(check1, check2, count):
         return check1, check2
 def Pararell123(check1, check2, check3, count):
     """Pararell"""
-    # num_1 = 0
-    # num_2 = 0
-    # num_3 = 0
-    # if num_1 >= 2 and num_2 >= 2:
-    #     check3 -=
-    #     return check1, check2, check3
-    # elif num_1 >= 2 and num_3 >= 2:
-    #     check2 -= 1
-    #     return check1, check2, check3
-    # elif num_2 >= 2 and num_3 >= 2:
-    #     check1 -= 1
-    #     return check1, check2, check3
     if count % 3 == 0:
         num_1 += 1
         check1 -= 1
