@@ -826,4 +826,3 @@ def main():
     else:
         print("Error: Can't find the valid solution. The problem is too complicated for this program.")
 main()
-1
